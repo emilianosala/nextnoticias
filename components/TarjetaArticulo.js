@@ -35,6 +35,9 @@ export default function TarjetaArticulo({ articulo, prioritaria = false }) {
           <Link href={`/noticia/${slug}`}>{titulo}</Link>
         </h3>
         <p className={estilos.resumen}>{resumen}</p>
+        <Link href={`/noticia/${slug}`} className={estilos.enlace}>
+          Ver más
+        </Link>
       </div>
     </article>
   );
