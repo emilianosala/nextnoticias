@@ -19,7 +19,7 @@ export const comentarios = [
     slug: 'tren-rosario-cordoba-pruebas-iniciales',
     usuario: 'Marta',
     mensaje: '¿Habrá descuentos para estudiantes?',
-    fechaCreacion: '2025-08-15T13:05:00Z',
+    fechaCreacion: '2025-08-15T13:06:00Z',
   },
 
   // 2) olas-de-calor-alerta-naranja-centro

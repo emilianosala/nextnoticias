@@ -11,7 +11,6 @@ export default function LoadingApp() {
         }}
       />
 
-      {/* Barra de filtro */}
       <div
         style={{
           height: 56,
@@ -22,7 +21,6 @@ export default function LoadingApp() {
         }}
       />
 
-      {/* Grid de tarjetas (skeleton) */}
       <div
         style={{
           display: 'grid',
