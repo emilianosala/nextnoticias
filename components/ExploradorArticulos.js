@@ -25,7 +25,7 @@ const CATEGORIAS = [
   'negocios',
 ];
 
-// 👇 Skeleton con la misma grilla/alto que las tarjetas reales (evita saltos)
+// Skeleton con la misma grilla/alto que las tarjetas reales (evita saltos)
 function GridSkeleton() {
   return (
     <ul
@@ -101,9 +101,23 @@ export default function ExploradorArticulos() {
   );
   const favoritos = useSelector((s) => s.favoritos.ids);
 
+  // 1) Carga inicial y cuando cambia la categoría
   useEffect(() => {
     dispatch(cargarArticulos(categoriaActual));
   }, [dispatch, categoriaActual]);
+
+  // 2) Mostrar/ocultar el skeleton SSR según el estado de carga
+  useEffect(() => {
+    const el = document.getElementById('skeleton-explorar');
+    if (!el) return;
+    // Mientras estamos 'inicial' o 'cargando', dejamos el SSR skeleton visible
+    if (estado === 'inicial' || estado === 'cargando') {
+      el.style.display = '';
+      el.setAttribute('aria-hidden', 'true'); // accesibilidad
+    } else {
+      el.style.display = 'none';
+    }
+  }, [estado]);
 
   const cantidad = items.length;
   const tituloCategoria = useMemo(
