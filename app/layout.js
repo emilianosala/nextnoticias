@@ -30,6 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://picsum.photos" crossOrigin="" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable}`}
       >

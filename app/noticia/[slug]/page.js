@@ -71,7 +71,8 @@ export default async function PaginaNoticia({ params }) {
           alt={articulo.titulo}
           width={820}
           height={460}
-          sizes="820px"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority
         />
       </div>
 

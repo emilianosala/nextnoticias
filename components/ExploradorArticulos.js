@@ -87,7 +87,7 @@ export default function ExploradorArticulos() {
           gap: '2vw',
         }}
       >
-        {items.map((art) => {
+        {items.map((art, index) => {
           const esFavorito = favoritos.includes(art.id);
           return (
             <li
@@ -105,7 +105,9 @@ export default function ExploradorArticulos() {
                   alt={art.titulo}
                   width={800}
                   height={450}
-                  sizes="(max-width: 900px) 100vw, 900px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={70}
+                  priority={index === 0}
                 />
               </Link>
               <div style={{ padding: '1rem' }}>

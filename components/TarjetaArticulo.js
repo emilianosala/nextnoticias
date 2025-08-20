@@ -3,7 +3,7 @@ import Link from 'next/link';
 import estilos from './TarjetaArticulo.module.css';
 import ImagenConFallback from './ImagenConFallback';
 
-export default function TarjetaArticulo({ articulo }) {
+export default function TarjetaArticulo({ articulo, prioritaria = false }) {
   // Desestructuro las propiedades del objeto artículo pasado como prop
   const { slug, titulo, resumen, imagenPortada, fechaPublicacion, categoria } =
     articulo;
@@ -17,8 +17,9 @@ export default function TarjetaArticulo({ articulo }) {
           alt={titulo}
           width={800}
           height={450}
-          sizes="(max-width: 900px) 100vw, 900px"
-          priority={false}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={prioritaria}
+          quality={70}
         />
         {/* Fin uso del componente ImagenConFallback */}
       </Link>

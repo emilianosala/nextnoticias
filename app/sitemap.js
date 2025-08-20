@@ -1,4 +1,3 @@
-// app/sitemap.js
 import { articulos } from '@/data/articulos';
 
 export default async function sitemap() {

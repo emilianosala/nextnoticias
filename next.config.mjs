@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     remotePatterns: [{ protocol: 'https', hostname: 'picsum.photos' }],
+    minimumCacheTTL: 60,
   },
 };
 

@@ -50,9 +50,9 @@ export default async function PaginaInicio({ searchParams }) {
       <div className={estilos.subtitulo}>Últimas noticias</div>
       <ul className={estilos.listaArticulos}>
         {/* Mapeo los artículos filtrados */}
-        {articulosFiltrados.map((articulo) => (
+        {articulosFiltrados.map((articulo, index) => (
           <li key={articulo.id}>
-            <TarjetaArticulo articulo={articulo} />
+            <TarjetaArticulo articulo={articulo} prioritaria={index === 0} />
           </li>
         ))}
         {/* Fin mapeo */}
