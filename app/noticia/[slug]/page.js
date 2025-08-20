@@ -73,6 +73,8 @@ export default async function PaginaNoticia({ params }) {
           height={460}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB..."
         />
       </div>
 

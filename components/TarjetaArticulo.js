@@ -20,6 +20,8 @@ export default function TarjetaArticulo({ articulo, prioritaria = false }) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority={prioritaria}
           quality={70}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB..."
         />
         {/* Fin uso del componente ImagenConFallback */}
       </Link>
