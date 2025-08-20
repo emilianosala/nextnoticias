@@ -1,9 +1,11 @@
+import Link from 'next/link';
+
 export default function NotFound() {
   return (
     <div style={{ padding: '2rem', textAlign: 'center' }}>
       <h1>❌ Página no encontrada</h1>
       <p>La página que buscas no existe o fue eliminada.</p>
-      <a
+      <Link
         href="/"
         style={{
           display: 'inline-block',
@@ -16,7 +18,7 @@ export default function NotFound() {
         }}
       >
         Volver a inicio
-      </a>
+      </Link>
     </div>
   );
 }
