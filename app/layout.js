@@ -20,6 +20,11 @@ const raleway = Raleway({
 export const metadata = {
   title: 'Next Noticias',
   description: 'El diario de Next.js',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  ),
+  openGraph: { siteName: 'Next Noticias', type: 'website' },
+  twitter: { card: 'summary_large_image' },
 };
 
 export default function RootLayout({ children }) {

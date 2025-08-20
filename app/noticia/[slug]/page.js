@@ -19,10 +19,19 @@ export async function generateMetadata({ params }) {
     description: articulo.resumen,
     alternates: { canonical: urlCanonica },
     openGraph: {
+      type: 'article',
       title: articulo.titulo,
       description: articulo.resumen,
       url: urlCanonica,
-      images: [{ url: imagenOG }],
+      siteName: 'Next Noticias',
+      images: [
+        {
+          url: imagenOG,
+          width: 1200,
+          height: 630,
+          alt: articulo.titulo,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
